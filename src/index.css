@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Configure custom font families */
+@theme {
+  --font-family-sans: Poppins, ui-sans-serif, system-ui, sans-serif;
+  --font-family-poppins: Poppins, sans-serif;
+}
