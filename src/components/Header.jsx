@@ -43,9 +43,10 @@ const Header = () => {
               className="group relative text-white font-medium px-4 py-2 transition-all"
             >
               {item.label}
-              {/* Hover Glow Effect */}
-              <span className="absolute inset-0 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="absolute inset-0 shadow-[0_20px_10px_rgba(255,255,255,0.2)] blur-md animate-shimmer" />
+
+              {/* --- Bottom Glow Hover Effect --- */}
+              <span className="absolute inset-0 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <span className="absolute top-60/100 left-1/2 -translate-x-1/2 w-[30%] h-[47%] bg-gradient-to-t from-white/80 to-transparent blur-[8px]" />
               </span>
             </button>
           ))}
@@ -58,7 +59,7 @@ const Header = () => {
           </button>
         </Link>
 
-        {/* --- Mobile Toggle --- */}
+        {/* --- Mobile Menu Toggle --- */}
         <button
           className="md:hidden flex flex-col gap-1.5 focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
