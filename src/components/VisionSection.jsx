@@ -9,16 +9,16 @@ const VisionSection = () => {
         <img
           src={visionImage}
           alt="background glow"
-          className="absolute top-888/1000 left-1/2 w-[100%] max-w-none -translate-x-1/2 -translate-y-[60%] opacity-100 object-cover pointer-events-none select-none"
+          className="absolute top-940/1000 left-1/2 w-[100%] max-w-none -translate-x-1/2 -translate-y-[60%] opacity-100 object-cover pointer-events-none select-none"
         />
       </div>
 
       {/* Vision Text */}
       <div className="relative z-10 text-center px-6">
-        <h2 className=" lg:text-[200px] font-light lowercase tracking-[0.2em] text-white">
+        <h2 className=" lg:text-[300px] font-light -tracking-[0.60rem] lowercase text-white mt-50">
           vision
         </h2>
-        <p className="text-white text-3xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, laborum dolore assumenda fugit voluptates harum eum eaque ipsa deserunt. Quaerat asperiores qui ducimus? Officiis, cumque est officia commodi iste incidunt? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio non at iusto vitae corporis veniam et necessitatibus, harum, tenetur sequi earum numquam. Tempora, omnis officiis. Corporis possimus vitae, architecto nulla beatae accusamus vel! Vero totam, dolore aliquid nam quia velit dicta, itaque voluptates maiores rem provident voluptatibus voluptas. Consequatur, corrupti.</p>
+        {/* <p className="text-white text-3xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, laborum dolore assumenda fugit voluptates harum eum eaque ipsa deserunt. Quaerat asperiores qui ducimus? Officiis, cumque est officia commodi iste incidunt? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio non at iusto vitae corporis veniam et necessitatibus, harum, tenetur sequi earum numquam. Tempora, omnis officiis. Corporis possimus vitae, architecto nulla beatae accusamus vel! Vero totam, dolore aliquid nam quia velit dicta, itaque voluptates maiores rem provident voluptatibus voluptas. Consequatur, corrupti.</p> */}
         
       </div>
     </section>

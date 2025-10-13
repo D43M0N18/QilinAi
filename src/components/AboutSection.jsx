@@ -49,7 +49,7 @@ const AboutSection = () => {
       <div className="container mx-auto max-w-6xl relative z-10">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-6xl md:text-8xl font-bold lowercase mb-4 text-white">
+          <h2 className=" whitespace-nowrap md:text-[300px] font-light -tracking-[0.60rem] lowercase text-white  mb-4 -ml-11">
             about us
           </h2>
           <p className="text-white text-lg opacity-70">
@@ -71,9 +71,9 @@ const AboutSection = () => {
                 <img
                   src={member.bwImg}
                   alt={member.name}
-                  className="w-full h-full object-cover transition-all duration-500 group-hover:opacity-100"
+                  className="w-full h-full object-cover grayscale    transition-all duration-500 group-hover:opacity-100"
                 />
-                <div className="absolute inset-0 bg-[#003764] mix-blend-multiply opacity-70 transition-all duration-500 group-hover:opacity-0"></div>
+                <div className="absolute inset-0 bg-[#557E9F] mix-blend-multiply opacity-70 transition-all duration-500 group-hover:opacity-0"></div>
 
                 {/* Colored image (on hover) */}
                 <img

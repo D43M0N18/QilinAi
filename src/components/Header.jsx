@@ -12,25 +12,25 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent border-white/5">
+    <header className="fixed bottom-88/100 left-0 right-0 z-50 bg-transparent border-white/5">
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* --- Logo --- */}
         <div
           onClick={() => scrollToSection("hero")}
-          className="flex items-center gap-3 cursor-pointer"
+          className="flex items-center gap-2 cursor-pointer"
         >
           <img
             src={Logo}
             alt="Logo"
             className="w-12 h-12 rounded-full object-contain"
           />
-          <div className="font-semibold tracking-wide text-white text-2xl">
+          <div className="tracking-wide text-white text-3xl">
             Qilin<span className="text-gray-300">AI</span>
           </div>
         </div>
 
         {/* --- Center Nav --- */}
-        <div className="hidden md:flex items-center justify-center gap-16 text-xl px-6 py-2 rounded-xl border border-white/25 backdrop-blur-md shadow-[0_4px_8px_rgba(255,255,255,0.08)] bg-[rgba(0,0,20,0.25)] relative">
+        <div className="hidden md:flex items-center justify-center gap-0 text-2xl px-6 py-2 rounded-xl border border-white/25 backdrop-blur-md shadow-[0_4px_8px_rgba(255,255,255,0.08)] bg-[rgba(0,0,20,0.25)] relative ml-2">
           {[
             { id: "vision", label: "Vision" },
             { id: "about", label: "About us" },
@@ -40,7 +40,7 @@ const Header = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="group relative text-white font-medium px-4 py-2 transition-all"
+              className="group relative text-white transition-all ml-8 mr-7"
             >
               {item.label}
 
@@ -54,8 +54,8 @@ const Header = () => {
 
         {/* --- Waitlist Button --- */}
         <Link to="/waitlist">
-          <button className="mt-10 bg-white/10 text-white border border-white/20 px-8 py-3 md:px-10 md:py-4 rounded-full font-medium text-lg hover:bg-white/20 backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)] transition-all">
-            Join the Waitlist
+          <button className=" bg-transparent text-white border border-white/20 px-8 py-1 md:px-5  rounded-[12px] text-lg hover:bg-white/20 backdrop-blur-md shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)] transition-all">
+            Join Waitlist
           </button>
         </Link>
 
