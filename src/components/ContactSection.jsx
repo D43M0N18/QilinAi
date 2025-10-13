@@ -74,13 +74,13 @@ const ContactSection = () => {
 
         {/* Social Icons */}
         <div className="flex justify-center gap-6 pt-12 border-t border-white/20">
-          <a href="https://twitter.com/qilinai" target="_blank" className="w-12 h-12 rounded-full bg-white/10 border border-primary/30 hover:border-primary hover:bg-primary/20 transition-all flex items-center justify-center">
+          <a href="https://x.com/qilinai0310?s=21" target="_blank" className="w-12 h-12 rounded-full bg-white/10 border border-primary/30 hover:border-primary hover:bg-primary/20 transition-all flex items-center justify-center">
             <Twitter className="w-5 h-5 text-white" />
           </a>
-          <a href="https://linkedin.com/company/qilin-ai" target="_blank" className="w-12 h-12 rounded-full bg-white/10 border border-primary/30 hover:border-primary hover:bg-primary/20 transition-all flex items-center justify-center">
+          <a href="https://www.linkedin.com/in/qilinai/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" className="w-12 h-12 rounded-full bg-white/10 border border-primary/30 hover:border-primary hover:bg-primary/20 transition-all flex items-center justify-center">
             <Linkedin className="w-5 h-5 text-white" />
           </a>
-          <a href="https://www.instagram.com/qilin.ai.solutions" target="_blank" className="w-12 h-12 rounded-full bg-white/10 border border-primary/30 hover:border-primary hover:bg-primary/20 transition-all flex items-center justify-center">
+          <a href="https://www.instagram.com/ai.qilin/?igsh=MTJ5ZHlibmhndGo4NA%3D%3D&utm_source=qr#" target="_blank" className="w-12 h-12 rounded-full bg-white/10 border border-primary/30 hover:border-primary hover:bg-primary/20 transition-all flex items-center justify-center">
             <Instagram className="w-5 h-5 text-white" />
           </a>
         </div>
