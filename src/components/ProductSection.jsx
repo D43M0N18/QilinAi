@@ -1,4 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
+import line1 from "../assets/Line 2.png"; // ✅ Update to correct path
+import line2 from "../assets/Line 3.png"; // ✅ Update to correct path
 
 const STEPS = [
   {
@@ -23,10 +25,6 @@ const STEPS = [
   },
 ];
 
-// ✅ New path - perfectly connects to circle edges (tuned manually)
-const svgPath =
-  "M420,90 C460,150 520,150 530,210 S520,280 330,340 S320,400 510,470 S540,520 330,600 S310,670 410,760";
-
 const ProductSection = () => {
   const [activeStep, setActiveStep] = useState(0);
   const containerRef = useRef(null);
@@ -49,19 +47,21 @@ const ProductSection = () => {
   return (
     <section
       id="product"
-      className="min-h-[140vh] w-full relative py-16 px-4"
+      className="min-h-[300vh] w-full relative py-16 px-4 overflow-hidden"
       style={{
         background:
           "radial-gradient(ellipse at center, #1a2332 0%, #0b1220 70%, #050a15 100%)",
       }}
     >
+      {/* Title */}
       <div className="text-center mb-12">
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 tracking-tight">
+        <h1 className="text-[300px] font-light -tracking-[0.60rem] lowercase text-white mb-4 -mt-20">
           Product
         </h1>
       </div>
 
-      <div className="text-center mb-20">
+      {/* Subtext */}
+      <div className="text-center mb-20 -mt-20">
         <h2 className="max-w-4xl mx-auto text-center text-white text-xl md:text-2xl lg:text-3xl font-medium leading-relaxed">
           we're reimagining how brands create and scale video advertising. Our
           mission is simple: to empower companies with AI-driven creativity that
@@ -69,52 +69,32 @@ const ProductSection = () => {
         </h2>
       </div>
 
+      {/* ✅ Background Lines */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-0 mt-167">
+        <img
+          src={line1}
+          alt="decorative line 1"
+          className="absolute top-0 left-48/100 -translate-x-1/2 w-[300px] h-[400px] opacity-70"
+        />
+        <img
+          src={line2}
+          alt="decorative line 2"
+          className="absolute top-[380px] left-429/1000 -translate-x-1/2 w-[300px] h-[900px] opacity-70"
+        />
+      </div>
+
+      {/* ✅ Steps Section */}
       <div
-        className="relative w-full max-w-[1200px] mx-auto h-[900px]"
+        className="relative w-full max-w-[1200px] mx-auto h-[900px] z-10"
         ref={containerRef}
       >
-        {/* ✅ SVG Line connecting boxes perfectly */}
-        <svg
-          className="absolute left-0 top-0 w-full h-full pointer-events-none z-0"
-          viewBox="0 0 800 900"
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <defs>
-            <filter id="lineGlow">
-              <feGaussianBlur stdDeviation="2" result="coloredBlur" />
-              <feMerge>
-                <feMergeNode in="coloredBlur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-          </defs>
-
-          <path
-            d={svgPath}
-            stroke="#ffffff"
-            strokeWidth={3}
-            fill="none"
-            filter="url(#lineGlow)"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            style={{
-              strokeDasharray: 1400,
-              strokeDashoffset:
-                1400 - 1400 * (activeStep / Math.max(STEPS.length - 1, 1)),
-              transition: "stroke-dashoffset 1s ease-out",
-              opacity: 0.95,
-            }}
-          />
-        </svg>
-
-        {/* ✅ Boxes positioned exactly on curve edges */}
-        <div className="absolute top-0 left-0 w-full h-full z-10">
+        <div className="absolute top-0 left-0 w-full h-full">
           {STEPS.map((step, index) => {
             const positions = [
-              { top: 135, left: "61.3%", isLeft: false, circleLeft: "-14px" },
-              { top: 285, left: "6%", isLeft: true, circleLeft: "calc(100% - 14px)" },
-              { top: 430, left: "66%", isLeft: false, circleLeft: "-14px" },
-              { top: 570, left: "5%", isLeft: true, circleLeft: "calc(100% - 14px)" },
+              { top: 50, left: "60%", isLeft: false, circleLeft: "-14px" },
+              { top: 380, left: "-3%", isLeft: true, circleLeft: "calc(100% - 14px)" },
+              { top: 810, left: "53.6%", isLeft: false, circleLeft: "-14px" },
+              { top: 1170, left: "6%", isLeft: true, circleLeft: "calc(100% - 14px)" },
             ];
 
             const position = positions[index];
@@ -132,7 +112,6 @@ const ProductSection = () => {
                   left: position.left,
                   width: "32%",
                   maxWidth: "380px",
-                  zIndex: 15,
                 }}
               >
                 <div
