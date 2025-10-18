@@ -28,9 +28,7 @@ export default function Waitlist() {
         {
           method: "POST",
           mode: "no-cors",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
         }
       );
@@ -47,7 +45,7 @@ export default function Waitlist() {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
       {/* Background */}
-      <div className="absolute w-[225vh]">
+      <div className="absolute inset-0">
         <img
           src={BgTop}
           alt="Top background"
@@ -57,37 +55,46 @@ export default function Waitlist() {
       </div>
 
       {/* Main Container */}
-      <div className="relative z-10 w-full mt-15 h-[85vh] max-w-6xl mx-auto p-6 lg:p-12 flex justify-center">
-        <div className="backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl flex flex-col lg:flex-row w-full overflow-hidden relative">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-10 lg:px-12 py-10 sm:py-12 md:py-16 flex justify-center items-center">
+        <div className="backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl flex flex-col lg:flex-row w-full overflow-hidden relative ">
 
-          {/* ✅ FIXED TOP LEFT LOGO */}
-          <div className="absolute top-6 left-6 flex items-center gap-2 cursor-pointer z-20">
-            <img src={Logo} alt="Logo" className="w-11 h-11 rounded-full object-contain" />
-            <div className=" tracking-wide text-white text-3xl">
+          {/* ✅ Logo - fixed top-left on large screens, centered on small */}
+          <div className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-2 z-20">
+            <img
+              src={Logo}
+              alt="Logo"
+              className="w-9 h-9 sm:w-11 sm:h-11 rounded-full object-contain"
+            />
+            <div className="tracking-wide text-white text-2xl sm:text-3xl font-medium">
               Qilin<span className="text-gray-300">AI</span>
             </div>
           </div>
 
           {/* Left Section */}
-          <div className="flex-[1.3] bg-[#0A1E3980] p-10 lg:p-16 lg:pr-8">
-            <h1 className="text-white leading-tight mb-30 mt-20">
-              <span className="block text-6xl ">Hello,</span>
-              <span className="block text-7xl font-bold">welcome!</span>
+          <div className="flex-[1.3] bg-[#0A1E3980] p-6 sm:p-8 md:p-10 lg:p-14 xl:p-16 flex flex-col justify-center items-start text-left">
+            <h1 className="text-white leading-tight mb-6 sm:mb-10 md:mb-12 mt-16 sm:mt-20">
+              <span className="block text-4xl sm:text-5xl md:text-6xl">Hello,</span>
+              <span className="block text-5xl sm:text-6xl md:text-7xl font-bold">
+                welcome!
+              </span>
             </h1>
 
-            <p className="text-white/90 text-lg leading-relaxed">
+            <p className="text-white/90 text-base sm:text-lg md:text-xl leading-relaxed max-w-md">
               Join the waitlist to be among the first to experience QilinAI.
               <br />
-              We'll notify you as soon as we launch.
+              We’ll notify you as soon as we launch.
             </p>
           </div>
 
           {/* Divider */}
-          <div className="w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
+          <div className="hidden lg:block w-px bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
 
           {/* Right Section - Form */}
-          <div className="flex-1 bg-[#02071AB5] lg:p-16 lg:pl-8 flex items-center">
-            <form onSubmit={handleSubmit} className="space-y-5 w-85 ml-8 max-w-sm">
+          <div className="flex-1 bg-[#02071AB5] p-6 sm:p-8 md:p-10 lg:p-14 flex items-center justify-center">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-5 w-full max-w-sm sm:max-w-md md:max-w-sm"
+            >
               <input
                 type="text"
                 name="name"
@@ -95,7 +102,7 @@ export default function Waitlist() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full h-12 px-6 bg-white/3 border border-[#929599] rounded-[20px] text-white text-2xl placeholder-white/10 focus:outline-none focus:border-white/30 focus:bg-[#202938] transition-all duration-300 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.9)]"
+                className="w-full h-11 sm:h-12 px-5 sm:px-6 bg-white/5 border border-[#929599] rounded-[20px] text-white text-lg sm:text-xl placeholder-white/30 focus:outline-none focus:border-white/30 focus:bg-[#202938] transition-all duration-300 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.9)]"
               />
 
               <input
@@ -104,7 +111,7 @@ export default function Waitlist() {
                 placeholder="Company name"
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full h-12 px-6 bg-white/3 border border-[#929599] rounded-[20px] text-white text-2xl placeholder-white/10 focus:outline-none focus:border-white/30 focus:bg-[#202938] transition-all duration-300 hadow-inner shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.5)]"
+                className="w-full h-11 sm:h-12 px-5 sm:px-6 bg-white/5 border border-[#929599] rounded-[20px] text-white text-lg sm:text-xl placeholder-white/30 focus:outline-none focus:border-white/30 focus:bg-[#202938] transition-all duration-300 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.5)]"
               />
 
               <input
@@ -114,19 +121,19 @@ export default function Waitlist() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full h-12 px-6 bg-white/3 border border-[#929599] rounded-[20px] text-white text-2xl placeholder-white/20 focus:outline-none focus:border-white/30 focus:bg-[#202938] transition-all duration-300 hadow-inner shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.9)]"
+                className="w-full h-11 sm:h-12 px-5 sm:px-6 bg-white/5 border border-[#929599] rounded-[20px] text-white text-lg sm:text-xl placeholder-white/30 focus:outline-none focus:border-white/30 focus:bg-[#202938] transition-all duration-300 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.9)]"
               />
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-[170px] h-10  border bg-white/10 border-[#929599] hover:bg-[#4A5566] disabled:opacity-50 disabled:cursor-not-allowed rounded-full text-white font-medium transition-all duration-300 hover:shadow-lg mt-8 ml-21 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.9)]"
+                className="w-[150px] sm:w-[170px] h-10 border bg-white/10 border-[#929599] hover:bg-[#4A5566] disabled:opacity-50 disabled:cursor-not-allowed rounded-full text-white font-medium transition-all duration-300 hover:shadow-lg mt-6 sm:mt-8 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.9)] mx-auto block text-center"
               >
                 {loading ? "Submitting..." : success ? "Submitted!" : "Submit"}
               </button>
 
               {success && (
-                <div className="text-center text-green-400 text-sm mt-4">
+                <div className="text-center text-green-400 text-sm sm:text-base mt-4">
                   Thank you! We'll notify you when we launch.
                 </div>
               )}
@@ -134,15 +141,6 @@ export default function Waitlist() {
           </div>
         </div>
       </div>
-
-      {/* Overlay */}
-      {/* <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,20,0.4) 75%, rgba(0,0,20,0.8) 100%)",
-        }}
-      /> */}
     </div>
   );
 }
