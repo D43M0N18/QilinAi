@@ -13,7 +13,7 @@ const HeroSection = () => {
         <img
           src={BgImage}
           alt="background glow"
-          className="absolute w-full h-full object-cover opacity-100 pointer-events-none select-none"
+          className="absolute  w-full h-[103%] object-cover opacity-100 pointer-events-none select-none"
         />
       </div>
 

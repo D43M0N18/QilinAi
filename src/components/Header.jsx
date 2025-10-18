@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50  ">
-      <nav className="container mx-auto px-4 sm:px-6 py-3 flex items-center justify-between cursor-pointer">
+      <nav className="container mx-auto px-4 sm:px-6 py-3 flex items-center justify-between   ">
         {/* --- Logo --- */}
         <div
           onClick={() => scrollToSection("hero")}
@@ -30,7 +30,7 @@ const Header = () => {
         </div>
 
         {/* --- Desktop Nav (only from lg breakpoint upward) --- */}
-        <div className="hidden cursor-pointer lg:flex items-center justify-center gap-0 text-lg xl:text-2xl px-5 py-2 rounded-xl border border-white/25 backdrop-blur-md shadow-[0_4px_8px_rgba(255,255,255,0.08)] bg-[rgba(0,0,20,0.25)]">
+        <div className="hidden cursor-pointer lg:flex items-center justify-center gap-7 text-lg xl:text-2xl px-5 py-2 rounded-xl border border-white/25 backdrop-blur-md shadow-[0_4px_8px_rgba(255,255,255,0.08)] bg-[rgba(0,0,20,0.25)]">
           {[
             { id: "vision", label: "Vision" },
             { id: "about", label: "About us" },
