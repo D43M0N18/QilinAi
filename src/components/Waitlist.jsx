@@ -56,10 +56,12 @@ export default function Waitlist() {
 
       {/* Main Container */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-10 lg:px-12 py-10 sm:py-12 md:py-16 flex justify-center items-center">
-        <div className="backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl flex flex-col lg:flex-row w-full overflow-hidden relative ">
-
+        <div className="backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl flex flex-col lg:flex-row w-full overflow-hidden relative h-140 ">
           {/* ✅ Logo - fixed top-left on large screens, centered on small */}
-          <div className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-2 z-20">
+          <Link
+            to="/"
+            className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-2 z-20 cursor-pointer"
+          >
             <img
               src={Logo}
               alt="Logo"
@@ -68,18 +70,20 @@ export default function Waitlist() {
             <div className="tracking-wide text-white text-2xl sm:text-3xl font-medium">
               Qilin<span className="text-gray-300">AI</span>
             </div>
-          </div>
+          </Link>
 
           {/* Left Section */}
           <div className="flex-[1.3] bg-[#0A1E3980] p-6 sm:p-8 md:p-10 lg:p-14 xl:p-16 flex flex-col justify-center items-start text-left">
             <h1 className="text-white leading-tight mb-6 sm:mb-10 md:mb-12 mt-16 sm:mt-20">
-              <span className="block text-4xl sm:text-5xl md:text-6xl">Hello,</span>
+              <span className="block text-4xl sm:text-5xl md:text-6xl">
+                Hello,
+              </span>
               <span className="block text-5xl sm:text-6xl md:text-7xl font-bold">
                 welcome!
               </span>
             </h1>
 
-            <p className="text-white/90 text-base sm:text-lg md:text-xl leading-relaxed max-w-md">
+            <p className="lg:whitespace-nowrap text-white/90 text-base sm:text-lg md:text-[16px] leading-relaxed max-w-md">
               Join the waitlist to be among the first to experience QilinAI.
               <br />
               We’ll notify you as soon as we launch.
@@ -93,7 +97,7 @@ export default function Waitlist() {
           <div className="flex-1 bg-[#02071AB5] p-6 sm:p-8 md:p-10 lg:p-14 flex items-center justify-center">
             <form
               onSubmit={handleSubmit}
-              className="space-y-5 w-full max-w-sm sm:max-w-md md:max-w-sm"
+              className="space-y-8 w-full max-w-sm sm:max-w-md md:max-w-sm"
             >
               <input
                 type="text"
@@ -102,7 +106,7 @@ export default function Waitlist() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full h-11 sm:h-12 px-5 sm:px-6 bg-white/5 border border-[#929599] rounded-[20px] text-white text-lg sm:text-xl placeholder-white/30 focus:outline-none focus:border-white/30 focus:bg-[#202938] transition-all duration-300 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.9)]"
+                className="w-80 h-11 sm:h-12 px-5 sm:px-6 bg-white/5 border border-[#929599] rounded-[20px] text-white text-lg sm:text-xl placeholder-white/30 focus:outline-none focus:border-white/30 focus:bg-[#202938] transition-all duration-300 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.9)] mx-auto block"
               />
 
               <input
@@ -111,7 +115,7 @@ export default function Waitlist() {
                 placeholder="Company name"
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full h-11 sm:h-12 px-5 sm:px-6 bg-white/5 border border-[#929599] rounded-[20px] text-white text-lg sm:text-xl placeholder-white/30 focus:outline-none focus:border-white/30 focus:bg-[#202938] transition-all duration-300 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.5)]"
+                className="w-80 h-11 sm:h-12 px-5 sm:px-6 bg-white/5 border border-[#929599] rounded-[20px] text-white text-lg sm:text-xl placeholder-white/30 focus:outline-none focus:border-white/30 focus:bg-[#202938] transition-all duration-300 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.5)] mx-auto block"
               />
 
               <input
@@ -121,13 +125,13 @@ export default function Waitlist() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full h-11 sm:h-12 px-5 sm:px-6 bg-white/5 border border-[#929599] rounded-[20px] text-white text-lg sm:text-xl placeholder-white/30 focus:outline-none focus:border-white/30 focus:bg-[#202938] transition-all duration-300 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.9)]"
+                className="w-80 h-11 sm:h-12 px-5 sm:px-6 bg-white/5 border border-[#929599] rounded-[20px] text-white text-lg sm:text-xl placeholder-white/30 focus:outline-none focus:border-white/30 focus:bg-[#202938] transition-all duration-300 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.9)] mx-auto block"
               />
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-[150px] sm:w-[170px] h-10 border bg-white/10 border-[#929599] hover:bg-[#4A5566] disabled:opacity-50 disabled:cursor-not-allowed rounded-full text-white font-medium transition-all duration-300 hover:shadow-lg mt-6 sm:mt-8 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.9)] mx-auto block text-center"
+                className="w-[150px] sm:w-[170px] h-8 border bg-white/10 border-[#929599] hover:bg-[#4A5566] disabled:opacity-50 disabled:cursor-not-allowed rounded-full text-white font-medium transition-all duration-300 hover:shadow-lg mt-6 sm:mt-8 shadow-[inset_1px_1px_2px_rgba(255,255,255,0.4),inset_2px_2px_4px_rgba(0,0,0,0.9)] mx-auto block text-center"
               >
                 {loading ? "Submitting..." : success ? "Submitted!" : "Submit"}
               </button>

@@ -12,14 +12,14 @@ const ContactSection = () => {
       {/* Background Images */}
       <img
         src={ContactShape}
-        className="absolute left-0 top-10 w-[45%] max-w-[500px] opacity-30 pointer-events-none"
+        className="absolute z-20 left-67/100 top-160 w-[45%] max-w-[500px] opacity-70 pointer-events-none"
         alt="contact shape"
       />
-      <img
+      {/* <img
         src={GroupBg}
         className="absolute right-[-10%] top-[20%] w-[60vw] max-w-[700px] opacity-30 blur-md pointer-events-none"
         alt="background group"
-      />
+      /> */}
 
       {/* Overlay */}
       <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#02071add] via-[#02071acc] to-[#02071add] backdrop-blur-[1px]" />

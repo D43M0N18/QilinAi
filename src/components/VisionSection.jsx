@@ -4,7 +4,8 @@ import vision from "../assets/vision01.png";
 
 const VisionSection = () => {
   return (
-    <section className="relative min-h-[130vh] flex items-center justify-center overflow-hidden bg-[#ffffff] -mt-8">
+    <section className="relative min-h-[130vh] flex items-center justify-center overflow-hidden bg-[#ffffff] -mt-8"
+    id="vision">
       {/* Background Glow Image */}
       {/* <img
               src={vision}
