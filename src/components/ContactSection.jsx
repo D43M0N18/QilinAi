@@ -2,6 +2,7 @@ import React from "react";
 import { Mail, Phone, Twitter, Linkedin, Instagram, Facebook } from "lucide-react";
 import GroupBg from '../assets/about.png';
 import ContactShape from '../assets/contact.png';
+import Contact from '../assets/contactus.png';
 
 const ContactSection = () => {
   return (
@@ -9,6 +10,12 @@ const ContactSection = () => {
       id="contact"
       className="relative min-h-screen py-20 px-6 bg-[#02071A] overflow-hidden text-white"
     >
+      <img
+              src={Contact}
+              alt="background glow"
+              className="absolute top-315/1000 z-20 left-503/1000 w-[102%] max-w-none -translate-x-1/2 -translate-y-[60%] opacity-100 object-cover pointer-events-none select-none"
+            />
+      
       {/* Decorative Background Images */}
       <img src={ContactShape} className="absolute left-0 top-10 w-[45%] opacity-30 pointer-events-none" />
       <img src={GroupBg} className="absolute right-[-10%] top-[20%] w-[60vw] opacity-30 blur-md pointer-events-none" />
@@ -19,7 +26,7 @@ const ContactSection = () => {
         
         {/* HEADER - Keep same as asked */}
         <div className="text-center mb-16">
-          <h2 className="text-[300px] font-light -tracking-[0.60rem] lowercase text-white mb-4">
+          <h2 className="text-[320px] font-light -tracking-[0.8rem] lowercase text-white mb-4">
             contact
           </h2>
         </div>

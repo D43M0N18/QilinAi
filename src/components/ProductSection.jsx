@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import line1 from "../assets/Line 2.png"; // ✅ Update to correct path
 import line2 from "../assets/Line 3.png"; // ✅ Update to correct path
+import ProductImage from "../assets/product.png";
 
 const STEPS = [
   {
@@ -47,12 +48,18 @@ const ProductSection = () => {
   return (
     <section
       id="product"
-      className="min-h-[300vh] w-full relative py-16 px-4 overflow-hidden"
-      style={{
-        background:
-          "radial-gradient(ellipse at center, #1a2332 0%, #0b1220 70%, #050a15 100%)",
-      }}
+      className="min-h-[300vh] w-full relative py-16 px-4 overflow-hidden bg-[#02071A]"
+      // style={{
+      //   background:
+      //     "radial-gradient(ellipse at center, #1a2332 0%, #0b1220 70%, #050a15 100%)",
+      // }}
     >
+      <img
+              src={ProductImage}
+              alt="background glow"
+              className="absolute top-75/100 left-55/100 w-[140vw] max-w-none -translate-x-1/2 -translate-y-[60%] opacity-100 object-cover pointer-events-none select-none"
+            />
+            <div className="absolute inset-0 bg-[#02071A]/10" />
       {/* Title */}
       <div className="text-center mb-12">
         <h1 className="text-[300px] font-light -tracking-[0.60rem] lowercase text-white mb-4 -mt-20">
@@ -74,7 +81,7 @@ const ProductSection = () => {
         <img
           src={line1}
           alt="decorative line 1"
-          className="absolute top-0 left-48/100 -translate-x-1/2 w-[300px] h-[400px] opacity-70"
+          className="absolute top-0 left-4813/10000 -translate-x-1/2 w-[300px] h-[400px] opacity-70"
         />
         <img
           src={line2}
@@ -127,7 +134,7 @@ const ProductSection = () => {
                   }}
                 />
 
-                <div className="bg-gray-800/90 backdrop-blur-sm px-6 py-5 rounded-lg border border-gray-600/40 shadow-2xl relative z-10">
+                <div className="px-6 py-5 rounded-lg relative z-10">
                   <h3 className="text-lg font-semibold text-white mb-3 lowercase tracking-wide">
                     {step.title}
                   </h3>

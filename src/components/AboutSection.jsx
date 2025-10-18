@@ -6,6 +6,7 @@ import RhythmColor from "../assets/RhythmMundra.jpeg";
 import RhythmBW from "../assets/RhythmMundra.jpeg";
 import DevanshuColor from "../assets/DevanshuRana.jpeg";
 import DevanshuBW from "../assets/DevanshuRana.jpeg";
+import About from "../assets/aboutus.png";
 
 const AboutSection = () => {
   const teamMembers = [
@@ -37,19 +38,24 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="relative min-h-[110vh] py-20 px-6 bg-[#02071A] text-white overflow-hidden"
+      className="relative min-h-[180vh] py-20 px-6 bg-[#02071A] text-white overflow-hidden"
     >
       <img
         src={AboutImage}
         alt="background glow"
-        className="absolute top-7/10 left-1/2 w-[80%] max-w-none -translate-x-1/2 -translate-y-[60%] opacity-20 object-cover pointer-events-none select-none"
+        className="absolute top-8/10 left-1/2 w-[80%] max-w-none -translate-x-1/2 -translate-y-[60%] opacity-100 object-cover pointer-events-none select-none"
       />
-      <div className="absolute inset-0 bg-[#02071A]/80" />
+      <img
+        src={About}
+        alt="background glow"
+        className="absolute top-3/10 z-20 left-500/1000 w-[100%] max-w-none -translate-x-1/2 -translate-y-[60%] opacity-100 object-cover pointer-events-none select-none"
+      />
+      <div className="absolute inset-0 bg-[#02071A]/50" />
 
       <div className="container mx-auto max-w-6xl relative z-10">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className=" whitespace-nowrap md:text-[300px] font-light -tracking-[0.60rem] lowercase text-white  mb-4 -ml-11">
+          <h2 className=" whitespace-nowrap md:text-[300px] font-light -tracking-[0.36rem] lowercase text-white  mb-15 -ml-15">
             about us
           </h2>
           <p className="text-white text-lg opacity-70">
