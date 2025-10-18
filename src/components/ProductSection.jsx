@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import line1 from "../assets/Line 2.png"; // ✅ Update to correct path
 import line2 from "../assets/Line 3.png"; // ✅ Update to correct path
 import ProductImage from "../assets/product.png";
+import ProductIcon from "../assets/productH.png";
 
 const STEPS = [
   {
@@ -61,10 +62,11 @@ const ProductSection = () => {
             />
             <div className="absolute inset-0 bg-[#02071A]/10" />
       {/* Title */}
-      <div className="text-center mb-12">
-        <h1 className="text-[300px] font-light -tracking-[0.60rem] lowercase text-white mb-4 -mt-20">
+      <div className="text-center mb-13 -mt-22 ">
+        {/* <h1 className="text-[300px] font-light -tracking-[0.60rem] lowercase text-white mb-4 -mt-20">
           Product
-        </h1>
+        </h1> */}
+        <img className="scale-103" src={ProductIcon} alt="" />
       </div>
 
       {/* Subtext */}

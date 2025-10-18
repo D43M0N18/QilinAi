@@ -2,7 +2,7 @@ import React from "react";
 import { Mail, Twitter, Linkedin, Instagram } from "lucide-react";
 import GroupBg from "../assets/about.png";
 import ContactShape from "../assets/contact.png";
-
+import ContactIcon from "../assets/contactH.png";
 const ContactSection = () => {
   return (
     <section
@@ -27,13 +27,14 @@ const ContactSection = () => {
       <div className="relative z-10 container mx-auto max-w-6xl">
         {/* Title */}
         <div className="text-center mb-12 sm:mb-16">
-          <h2
+          {/* <h2
             className="text-white lowercase font-light leading-none 
             text-[60px] sm:text-[100px] md:text-[140px] lg:text-[200px] xl:text-[260px] 2xl:text-[320px]
             -tracking-[0.05em]"
           >
             contact
-          </h2>
+          </h2> */}
+          <img className="scale-133" src={ContactIcon} alt="" />
         </div>
 
         {/* Main Grid */}

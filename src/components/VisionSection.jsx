@@ -1,6 +1,7 @@
 import React from "react";
 import visionImage from "../assets/vision.png"; // update path
-import vision from "../assets/vision01.png";
+import VisionIcon from "../assets/visionH.png";
+
 
 const VisionSection = () => {
   return (
@@ -23,9 +24,10 @@ const VisionSection = () => {
 
       {/* Vision Text */}
       <div className="relative z-10 text-center px-6">
-        <h2 className=" lg:text-[310px] font-light -tracking-[0.4rem] lowercase text-white mt-50">
+        {/* <h2 className=" lg:text-[310px] font-light -tracking-[0.4rem] lowercase text-white mt-50">
           vision
-        </h2>
+        </h2> */}
+        <img className="scale-107" src={VisionIcon} alt="" />
         {/* <p className="text-white text-3xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, laborum dolore assumenda fugit voluptates harum eum eaque ipsa deserunt. Quaerat asperiores qui ducimus? Officiis, cumque est officia commodi iste incidunt? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio non at iusto vitae corporis veniam et necessitatibus, harum, tenetur sequi earum numquam. Tempora, omnis officiis. Corporis possimus vitae, architecto nulla beatae accusamus vel! Vero totam, dolore aliquid nam quia velit dicta, itaque voluptates maiores rem provident voluptatibus voluptas. Consequatur, corrupti.</p> */}
         
       </div>

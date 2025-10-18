@@ -7,11 +7,8 @@ import RhythmColor from "../assets/RhythmMundra.jpeg";
 import RhythmBW from "../assets/RhythmMundra.jpeg";
 import DevanshuColor from "../assets/DevanshuRana.jpeg";
 import DevanshuBW from "../assets/DevanshuRana.jpeg";
-import About from "../assets/aboutus.png";
-import AboutIcon from "../assets/test.png";
-import ContactIcon from "../assets/contactVisionmm.png";
-import ProductH from "../assets/productH.png"
-import Pricing from "../assets/pricing.png";
+import AboutIcon from "../assets/aboutH.png";
+
 const AboutSection = () => {
   const teamMembers = [
     { id: 1, name: "Devanshu Rana", role: "Co-Founder", colorImg: DevanshuColor, bwImg: DevanshuBW },
@@ -44,7 +41,7 @@ const AboutSection = () => {
               text-[60px] sm:text-[100px] md:text-[160px] lg:text-[200px] xl:text-[260px] 2xl:text-[300px] -tracking-[0.4rem] -mx-17">
             about us
           </h2> */}
-          <img src={AboutIcon} alt="" />
+          <img className="scale-133" src={AboutIcon} alt="" />
           <p className="text-white text-base sm:text-lg opacity-70">See, let's get to know</p>
           <div className="w-16 sm:w-24 h-1 bg-white mx-auto mt-4 rounded-full" />
         </div>
