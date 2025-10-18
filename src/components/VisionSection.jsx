@@ -6,11 +6,11 @@ const VisionSection = () => {
   return (
     <section className="relative min-h-[130vh] flex items-center justify-center overflow-hidden bg-[#ffffff] -mt-8">
       {/* Background Glow Image */}
-      <img
+      {/* <img
               src={vision}
               alt="background glow"
-              className="absolute  top-685/1000 z-20 left-492/1000 w-[102%] max-w-none -translate-x-1/2 -translate-y-[60%] opacity-100 object-cover pointer-events-none select-none"
-            />
+              className="absolute  top-688/1000 z-20 left-492/1000 w-[102%] max-w-none -translate-x-1/2 -translate-y-[60%] opacity-100 object-cover pointer-events-none select-none"
+            /> */}
       
       <div className="absolute inset-0 flex items-center justify-center ">
         <img
